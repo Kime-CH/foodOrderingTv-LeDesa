@@ -53,7 +53,7 @@ if(isset($_GET['delete'])){
    <h1 class="heading">Akun Kamar</h1>
    <!-- Add User -->
 
-   <a href="user_register.php" class="btn">Tambahkan Pengguna</a> <br>
+   <a href="user_register.php" class="btn">Tambahkan Kamar</a> <br>
 
 
    <div class="box-container">
