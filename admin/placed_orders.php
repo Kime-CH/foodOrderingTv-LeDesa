@@ -68,7 +68,7 @@ if(isset($_GET['delete'])){
    ?>
    <div class="box">
       <p> DiPesan Tanggal : <span><?= $fetch_orders['placed_on']; ?></span> </p>
-      <p> Kamar Tujuan : <span><?= $fetch_orders['address']; ?></span> </p>
+      <p> Kamar Tujuan : <span><?= $fetch_orders['name']; ?></span> </p>
       <p> Total Produk : <br>
    <span>
       <?php

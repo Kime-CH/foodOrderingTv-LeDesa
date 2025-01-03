@@ -51,6 +51,10 @@ if(isset($_GET['delete'])){
 <section class="accounts">
 
    <h1 class="heading">Akun Kamar</h1>
+   <!-- Add User -->
+
+   <a href="user_register.php" class="btn">Tambahkan Pengguna</a> <br>
+
 
    <div class="box-container">
 
@@ -60,11 +64,13 @@ if(isset($_GET['delete'])){
       if($select_account->rowCount() > 0){
          while($fetch_accounts = $select_account->fetch(PDO::FETCH_ASSOC)){  
    ?>
-   <div class="box">
-      <p> user id : <span><?= $fetch_accounts['id']; ?></span> </p>
-      <p> username : <span><?= $fetch_accounts['name']; ?></span> </p>
-      <a href="users_accounts.php?delete=<?= $fetch_accounts['id']; ?>" class="delete-btn" onclick="return confirm('Hapus Akun Ini?');">Hapus</a>
-   </div>
+<div class="box">
+   <p> user id : <span><?= $fetch_accounts['id']; ?></span> </p>
+   <p> username : <span><?= $fetch_accounts['name']; ?></span> </p>
+   <!--<a href="edit_user.php?id=<?= $fetch_accounts['id']; ?>" class="edit-btn">Edit</a>-->
+   <a href="users_accounts.php?delete=<?= $fetch_accounts['id']; ?>" class="delete-btn" onclick="return confirm('Hapus Akun Ini?');">Hapus</a>
+</div>
+
    <?php
       }
    }else{

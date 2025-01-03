@@ -60,7 +60,7 @@ if(isset($_POST['submit'])){
       <input type="email" name="email" required placeholder="Masukkan Email" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="password" name="pass" required placeholder="Masukkan Password" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="submit" value="Login" name="submit" class="btn">
-      <p>Tidak Punya Akun? <a href="register.php">Daftar Sekarang</a></p>
+      <!--<p>Tidak Punya Akun? <a href="register.php">Daftar Sekarang</a></p>-->
    </form>
 
 </section>

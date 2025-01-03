@@ -1,6 +1,6 @@
 <?php
 
-include 'components/connect.php';
+include '../components/connect.php';
 
 session_start();
 
@@ -39,7 +39,7 @@ if(isset($_POST['submit'])){
          $row = $select_user->fetch(PDO::FETCH_ASSOC);
          if($select_user->rowCount() > 0){
             $_SESSION['user_id'] = $row['id'];
-            header('location:home.php');
+            header('location:users_accounts.php');
          }
       }
    }
@@ -54,31 +54,28 @@ if(isset($_POST['submit'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Daftar Pengguna</title>
-   <link rel="icon" href="images/LeDesa.ico" type="image/x-icon">
+   <title>Tambah Pengguna</title>
+   <link rel="icon" href="../images/LeDesa.ico" type="image/x-icon">
 
    <!-- Font CDN Link -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
    <!-- CSS File -->
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="../css/style.css">
 
 </head>
 <body style="background-color:white;">
-   
-<!-- Header -->
-<?php include 'components/user_header.php'; ?>
 
 <section class="form-container" style="background-color: white;">
 
    <form action="" method="post">
-      <h3>Daftar Sekarang</h3>
+      <h3>Tambahkan Pengguna</h3>
       <input type="text" name="name" required placeholder="Masukkan Nomor Kamar" class="box" maxlength="50">
       <input type="email" name="email" required placeholder="Masukkan Kode Email" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="password" name="pass" required placeholder="Masukkan Password" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="password" name="cpass" required placeholder="Konfirmasi Password" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="submit" value="Daftar Sekarang" name="submit" class="btn">
-      <p>Sudah Punya Akun? <a href="login.php">Login Sekarang</a></p>
+      <input type="submit" value="Daftarkan Sekarang" name="submit" class="btn">
+      <p><a href="users_accounts.php">Kembali</a></p>
    </form>
 
 </section>
@@ -93,7 +90,7 @@ if(isset($_POST['submit'])){
 
 
 
-<?php include 'components/footer.php'; ?>
+<?php include '../components/footer.php'; ?>
 
 
 

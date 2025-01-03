@@ -517,8 +517,39 @@ section{
    color:var(--main-color);
 }
 
-
-
+.edit-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #34c19b;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-align: center;
+ }
+ 
+ .edit-btn:hover {
+    background-color: #218467;
+    color: #fff;
+ }
+ 
+ .message {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+ }
+ 
+ .message.success {
+    background-color: #4CAF50;
+ }
+ 
 
 
 

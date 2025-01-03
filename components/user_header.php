@@ -16,14 +16,14 @@ if(isset($message)){
 
    <section class="flex">
 
-      <div class="icons">
+      <div class="icons" style="display:none;">
          <?php
             $count_cart_items = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
             $count_cart_items->execute([$user_id]);
             $total_cart_items = $count_cart_items->rowCount();
          ?>
          <a href="cart.php"><i class="fas fa-shopping-cart"></i><span class="cart">(<?= $total_cart_items; ?>)</span></a>
-         <div id="user-btn" class="fas fa-user"></div>
+         <div id="user-btn" class="fas fa-user" style="display:none;"></div>
          <div id="menu-btn" class="fas fa-bars" style="display:none;"></div>
       </div>
 
